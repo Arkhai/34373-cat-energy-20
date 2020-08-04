@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи подбор программы</title>
   </head>
-  <body class="page__body">
+  <body>
     <header class="page-header">
       <a class="page-header__logo">
         <img src="https://via.placeholder.com/260x38" width="260" height="38" alt="Кэт энерджи">
@@ -17,7 +17,7 @@
 
         <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a>Главная
             </a>
           </li>
@@ -25,7 +25,7 @@
             <a href="catalog.html">Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a href="form.html">Подбор программы
             </a>
           </li>
@@ -35,10 +35,63 @@
       </nav>
     </header>
     <main class="page-main">
+      <section class="application">
+        <h1 class="application__title">
+          Подбор программы
+        </h1>
+        <p class="application__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="application__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="application_cat-info">
+            <p class="application__item"><label for="cat-name">Имя*</label><input type="text" id="cat-name" required placeholder="барсик"></p>
+            <p class="application__item"><label for="cat-weight">Вес (кг):*</label><input type="number" id="cat-weight" required placeholder="7"></p>
+            <p class="application__item"><label for="cat-age">Возраст (лет):</label><input type="number" id="cat-age" placeholder="7"></p>
+          </fieldset>
+
+          <fieldset class="application_programm">
+              <input type="radio" id="slim" name="programm"><label for="slim" checked>Похудение</label>
+              <input type="radio" id="muscles" name="programm"><label for="muscles">Набор массы</label>
+              <input type="radio" id="help-needed" name="programm"><label for="help-needed">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+
+          <fieldset class="application__contacts">
+            <label class="application__contacts-title">Контактные данные (владельца кота)</label>
+            <p class="application__item"><label for="owner-email">E-mail*</label><input type="email" id="owner-email" required placeholder="kuklachev@gmail.com"></p>
+            <p class="application__item"><label for="owner-tel">Вес (кг):*</label><input type="tel" id="owner-tel" required placeholder="8 (960) 900-60-90"></p>
+          </fieldset>
+
+          <fieldset class="application__comment">
+            <label class="application__comment-title">Комментарий</label>
+            <p class="application__item"><label><textarea type="text" id="owner-email">Расскажите обо всех повАдках кота</textarea></label></p>
+          </fieldset>
+
+          <fieldset class="application_addinfo">
+            <label class="application__addinfo-title">Комментарий</label>
+            <input type="checkbox" id="sugar" name="addinfo"><label for="sugar" checked>сахарозаменитель</label>
+            <input type="checkbox" id="water" name="addinfo"><label for="water">питьевая вода</label>
+            <input type="checkbox" id="milk" name="addinfo"><label for="milk">молоко</label>
+            <input type="checkbox" id="vitamins" name="addinfo"><label for="vitamins">витамины</label>
+        </fieldset>
+
+        <button class="application__button application__button--green" type="submit">отправить заявку</button>
+
+        <span class="application__requirement">* — Обязательные поля</span>
+
+      </form>
+      </section>
 
     </main>
 
     <footer class="page-footer">
+      <section class="cooperation">
+        <div class="cooperation__wrapper">
+          <p class="cooperation__desc">приглашаем к сотрудничеству дилеров!</p>
+          <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="cooperation__map">
+          <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта проезда в Кэт энерджи">
+        </div>
+      </section>
+
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
           <img src="https://via.placeholder.com/260x38" width="260" height="38" alt="Кэт энерджи">
